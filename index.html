@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital de Apoyo Celendín</title>
+    <link rel="icon" href="Imagenes/Icon-Title.png" type="image/x-icon">
+    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="Imagenes/Logo_DIRESA.png" alt=""></a>
+        <h3 class="TituloPequeño">Hospital de Apoyo Celendín</h3>
+        <input type="checkbox" id="menu" />
+        <label for="menu" class="iconoMenu">
+            <img src="Imagenes/menuHeader.png" class="menu-icono soloIcono" alt="">
+        </label>
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="Navegacion activo"><a href="index.html">INICIO</a></li>
+                <li class="Navegacion"><a href="Eventos.html">EVENTOS</a></li>
+                <li class="Navegacion"><a href="Login.html">INICIAR SESIÓN</a></li>
+                <li><a href="https://www.facebook.com/HospitalDeApoyoCelendin/" rel="noopener noreferrer" class="fa fa-facebook"
+                        target="_blank"></a></li>
+                <li><a href="" class="fa fa-whatsapp" target="_blank"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Hospital de Apoyo Celendín</h1>
+        <p>El Hospital de Apoyo Celelendín es una institución comprometida con brindar
+            atención médica integral, oportuna y de calidad a toda la población. Contamos con un
+            equipo de profesionales altamente capacitados y un enfoque humano
+            que prioriza la salud y el bienestar de nuestros pacientes. Nuestro objetivo es seguir
+            fortaleciendo los servicios de salud en beneficio de nuestra comunidad.
+        </p>
+    </section>
+
+    <section id="TextoImagen">
+        <div class="BienvenidaHospital">
+            <div class="texto">
+                <h2>¡BIENVENIDO!</h2>
+                <p><strong>
+                        Nos complace recibirte en nuestra página web, un espacio creado para brindarte toda la
+                        información que necesitas sobre nuestro hospital. Aquí podrás conocer nuestra misión,
+                        visión y los valores que nos guían en el compromiso con la salud y el bienestar de nuestra
+                        comunidad.
+                        <br>También encontrarás detalles sobre nuestro equipo de trabajo, profesionales dedicados al
+                        cuidado de tu salud, así como nuestra ubicación, servicios disponibles y mucho más.</strong>
+                </p>
+            </div>
+            <div class="img-container"></div>
+        </div>
+    </section>
+
+    <section id="TextoImagenVision">
+        <div class="BienvenidaHospitalMision">
+            <div class="img-container"></div>
+            <div class="textoVision">
+                <h3>Nuestra Misión</h3>
+                <p><strong>
+                        Brindar atención médica integral, oportuna y de calidad a la población de Celendín y zonas
+                        aledañas,
+                        promoviendo la salud, prevención y recuperación con un equipo comprometido y tecnología
+                        adecuada.</strong>
+                </p>
+                <h3>Nuestra Visión</h3>
+                <p><strong>
+                        Ser un hospital de referencia regional, reconocido por su excelencia en atención sanitaria,
+                        humanización y mejora continua para el bienestar de la comunidad.</strong>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <h3 class="textoServicios">"Descubre nuestros servicios médicos. ¡Tu salud es nuestra mayor prioridad!"</h3>
+    <section id="wrapperTarjetasServicios">
+        <div class="card">
+            <img src="Imagenes/medicinaGeneral.jpg" alt="">
+            <div class="info">
+                <h2>Medicina General</h2>
+                <p>Atención integral para el cuidado de tu salud. Diagnóstico y tratamiento de enfermedades comunes para
+                    todas las edades.</p>
+                <button class="btn abrirModal" data-modal="modal1">Quiero saber más</button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="cerrar">&times;</span>
+                <h2>Medicina General</h2>
+                <p>
+                    La medicina general es la atención sanitaria primaria que se encarga de la prevención, 
+                    diagnóstico y tratamiento de enfermedades y condiciones de salud en pacientes de todas 
+                    las edades. Un médico general actúa como el primer punto de contacto con el sistema de 
+                    salud, ofreciendo una atención integral y personalizada, y derivando a especialistas cuando 
+                    es necesario. Sus funciones incluyen realizar chequeos médicos, controlar enfermedades 
+                    crónicas, promover hábitos saludables y tratar patologías comunes como infecciones o lesiones. 
+                </p>
+                 <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Prevención de enfermedades:</b>Realiza controles, revisiones periódicas y vacunaciones, además de ofrecer consejos sobre alimentación saludable y hábitos de vida. 
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Diagnóstico y tratamiento:</b>Evalúa los síntomas de diversas enfermedades, desde infecciones hasta condiciones crónicas como diabetes e hipertensión
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Atención integral:</b>Se enfoca en el paciente en su conjunto, brindando un enfoque humano y personal.
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Derivación a especialistas:</b>Cuando una patología requiere atención más especializada, el médico general refiere al paciente al especialista correspondiente. 
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <img src="Imagenes/pediatria.jpg" alt="">
+            <div class="info">
+                <h2>Pediatría</h2>
+                <p>La pediatría es la rama de la medicina que se enfoca en la salud y el cuidado de los niños, desde el
+                    nacimiento hasta la adolescencia.</p>
+                <button class="btn abrirModal" data-modal="modal2">Quiero saber más</button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="cerrar">&times;</span>
+                <h2>Pediatría</h2>
+                <p>
+                    La pediatría es la rama de la medicina dedicada al cuidado integral de la
+                    salud de bebés, niños y adolescentes, desde la concepción hasta el final de
+                    la adolescencia, abarcando la prevención, diagnóstico y tratamiento de sus enfermedades.
+                    Los pediatras se especializan en las características únicas del crecimiento y desarrollo
+                    infantil, que difieren significativamente de las de un adulto, y también abordan problemas
+                    de comportamiento, emocionales y sociales. </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Cuidado Integral:</b>Se enfoca en la salud física,
+                    mental y social de los niños y adolescentes.
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Periodo evolutivo:</b>Se ocupa de la medicina de un
+                    ser en constante cambio (crecimiento, desarrollo, maduración).
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Prevención y diagnóstico:</b>Se enfoca en prevenir
+                    enfermedades, diagnosticar problemas a temprana edad y brindar tratamientos oportunos.
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Asesoramiento a padres:</b>Los pediatras brindan
+                    orientación a padres y cuidadores sobre nutrición, crianza, vacunación y desarrollo emocional.
+                </p>
+
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <img src="Imagenes/EMBA1.jpg" alt="">
+            <div class="info">
+                <h2>Obstetricia</h2>
+                <p>La obstetricia es la especialidad médica que se enfoca en el cuidado de la salud materna y fetal
+                    durante el embarazo, el parto y el puerperio, incluyendo la atención al recién nacido.</p>
+                <button class="btn abrirModal" data-modal="modal3">Quiero saber más</button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="cerrar">&times;</span>
+                <h2>OBSTETRICIA</h2>
+                <p>
+        La obstetricia es la rama de la medicina dedicada a la salud de la mujer durante el
+         embarazo, el parto y el periodo posparto (puerperio), incluyendo el cuidado del feto. 
+         Un obstetra, o especialista en obstetricia, acompaña a la futura madre, realiza seguimientos,
+          asiste en el parto y trata posibles complicaciones. 
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Embarazo:</b>Acompañamiento y seguimiento de la mujer desde la gestación hasta el nacimiento. 
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Parto:</b>Asistencia durante el trabajo de parto y el nacimiento del bebé. 
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Puerperio:</b>Cuidado de la madre en los días posteriores al parto. 
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Salud fetal: </b>Atención al feto y manejo de condiciones relacionadas con el embarazo que puedan afectarlo. 
+                </p>
+            </div>
+        </div>
+
+
+
+
+        <div class="card">
+            <img src="Imagenes/vacuna.jpg" alt="">
+            <div class="info">
+                <h3>Vacunación</h3>
+                <p>La vacunación es una forma sencilla, inocua y eficaz de protegernos contra enfermedades dañinas antes
+                    de entrar en contacto con ellas.</p>
+                <button class="btn abrirModal" data-modal="modal4">Quiero saber más</button>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="cerrar">&times;</span>
+                <h2>VACUNACIÓN</h2>
+                <p>
+                    La vacunación es el proceso de administrar una vacuna para que el sistema inmunitario
+                     del cuerpo aprenda a defenderse contra un agente infeccioso específico (como un virus
+                      o una bacteria), evitando así la enfermedad o sus formas graves. Las vacunas funcionan 
+                      introduciendo una forma debilitada o muerta del patógeno (o partes de él), lo que permite
+                       al cuerpo generar anticuerpos y memoria inmunológica sin enfermarse, preparándolo para
+                        luchar eficazmente si se expone al agente real en el futuro. 
+                </p>
+                 <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Estimulación del sistema inmunitario:</b>Al administrar la vacuna, el sistema inmunitario del cuerpo reconoce el componente de la vacuna como extraño. 
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b> Producción de anticuerpos:</b>El cuerpo entonces produce anticuerpos, que son proteínas que combaten y neutralizan el agente infeccioso. 
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Desarrollo de memoria:</b>Además de los anticuerpos, el sistema inmunitario desarrolla "memoria" para ese patógeno. 
+                </p>
+                <p>
+                    <i class="fa fa-check" aria-hidden="true"></i><b>Defensa futura:</b>Si la persona se expone nuevamente al agente infeccioso real, su cuerpo ya estará preparado para reconocerlo y destruirlo rápidamente.
+                </p>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section class="testimonios">
+        <div class="testimonial mySwiper">
+            <h2>Conoce Nuestro Equipo</h2>
+            <div class="testi-content swiper-wrapper">
+                <div class="slide swiper-slide">
+                    <img src="Imagenes/TestimoniosJuana.avif" alt="" class="image" />
+                    <p>"Directora del Hospital de Apoyo Celendín, destacada por su liderazgo, experiencia y compromiso
+                        con una gestión eficiente y un servicio humano y de calidad."</p>
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+                    <div class="details">
+                        <span class="name">ZHUSAN DEL CARMEN MEDINA CHAVEZ</span>
+                        <span class="job">Médico Cirujano</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="Imagenes/TestimoniosJuan.avif" alt="" class="image" />
+                    <p>"Jefe de Recursos Humanos del Hospital de Apoyo Celendín, destacado por su gestión estratégica del talento humano,
+                         promoción del desarrollo profesional de un entorno laboral basado en el respeto, la motivación 
+                         y la excelencia en el servicio.</p>
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+                    <div class="details">
+                        <span class="name">JORGE ARTURO ZAVALETA BARDALES</span>
+                        <span class="job">Biólogo</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="Imagenes/TestimoniosJuan.avif" alt="" class="image" />
+                    <p>"Administrador del Hospital de Apoyo Celendín, distinguido por su eficiencia en la gestión institucional, 
+                        capacidad de organización y compromiso con el uso responsable de los recursos, asegurando el buen funcionamiento 
+                        y la calidad en la atención hospitalaria."</p>
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+                    <div class="details">
+                        <span class="name">Alejandro Acosta Cabrera</span>
+                        <span class="job">Administrador</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+            .testimonios {
+                font-family: 'Poppins', sans-serif;
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #e3f2fd;
+            }
+
+            .testimonial h2 {
+                text-align: center;
+                margin-bottom: 10%;
+            }
+
+            .testimonial {
+                position: relative;
+                max-width: 900px;
+                width: 100%;
+                padding: 50px 0;
+                overflow: hidden;
+            }
+
+            .testimonial .image {
+                height: 170px;
+                width: 170px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            .testimonial .slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .slide p {
+                text-align: center;
+                padding: 0 100px;
+                font-size: 14px;
+                font-weight: 400;
+                color: #333;
+            }
+
+            .slide .quote-icon {
+                font-size: 30px;
+                color: #4070f4;
+            }
+
+            .slide .details {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .details .name {
+                font-size: 14px;
+                font-weight: 600;
+                color: #333;
+            }
+
+            .details .job {
+                font-size: 12px;
+                font-weight: 400;
+                color: #333;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                z-index: 1;
+            }
+
+            .swiper-button-next:hover,
+            .swiper-button-prev:hover {
+                transform: scale(1.3);
+            }
+
+            .swiper-pagination-active {
+                background-color: #4070f4;
+            }
+
+            @media screen and (max-width: 768px) {
+                .slide p {
+                    padding: 0 20px;
+                }
+            }
+        </style>
+    </section>
+
+    <footer class="piePagina">
+        <div class="FooterContainer">
+            <div class="iconosFooter">
+                <ul>
+                    <li><a href="https://www.facebook.com/HospitalDeApoyoCelendin/" rel="noopener noreferrer" class="fa fa-facebook"
+                            target="_blank"></a></li>
+                    <li><a href="https://wa.pe/IglesiaCe" class="fa fa-whatsapp" target="_blank"></a></li>
+                </ul>
+            </div>
+            <div class="UbiContenier">
+                <div class="ContactoIglesia">
+                    <p>
+                        <a href="" class="fa fa-envelope-o" target="_blank"> hagc.rrhh@gmail.com</a><br>
+                        <a href="https://maps.app.goo.gl/D91nsxvx4THAWVdK6" class="fa fa-map-marker" target="_blank">
+                            Jr. Grau 553</a><br>
+                        <a href="#" class="fa fa-phone"> +51 930384753</a>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="containerReserva">
+                <br>
+                <p>&copy; 2025. Todos los derechos reservados. Contact: Tony99441</p>
+            </div>
+        </div>
+    </footer>
+    <script src="Index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var testimoniosSwiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            grabCursor: true,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+
+<style>
+    .textoServicios {
+        color: #172248cb;
+        text-align: center;
+        padding: 0% 380px;
+        margin-top: 5%;
+        margin-bottom: 0%;
+    }
+
+    #wrapperTarjetasServicios {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columnas de igual ancho */
+        gap: 20px;
+        /* Espacio entre las tarjetas */
+        width: 90%;
+        margin: 4% auto;
+        /* Centra el contenedor verticalmente */
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .wrapperTarjetasServicios {
+        /*Flarta popnerr que sse centren solos*/
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .card {
+        position: relative;
+        width: 280px;
+        height: 380px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 2rem 1rem;
+        transition: 0.5s all ease-in-out;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+        z-index: 1;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(13, 36, 63, 0.3), rgba(13, 36, 63, 1));
+        z-index: 2;
+        opacity: 0;
+        transition: 0.5s all;
+    }
+
+    .card:hover::before {
+        opacity: 1;
+    }
+
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        border-radius: 10px;
+    }
+
+    .card .info {
+        position: relative;
+        color: #fff;
+        z-index: 3;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.5s all;
+    }
+
+    .card:hover .info {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .card .info h1 {
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .card .info p {
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .card .info .btn {
+        background: #fff;
+        padding: 0.5rem 1rem;
+        color: #000;
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: .4s ease-in-out;
+    }
+
+    .card .info .btn:hover {
+        background: gray;
+        color: #fff;
+        box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 768px) {
+        .textoServicios {
+            padding: 0 5%;
+        }
+
+        #wrapperTarjetasServicios {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .card {
+            max-width: 90%;
+        }
+    }
+
+
+    @media (max-width: 480px) {
+        #ServiciosHero {
+            height: 80vh;
+            background-attachment: scroll;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .textoServicios {
+            font-size: 25px;
+            margin-bottom: 15%;
+        }
+
+        #wrapperTarjetasServicios {
+            grid-template-columns: 1fr;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .card {
+            margin: 0 auto;
+        }
+    }
+
+
+    /* Estilos del modal */
+    .modal {
+        display: none;
+        /* oculto al inicio */
+        position: fixed;
+        z-index: 9999;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Contenido del modal */
+    .modal-content {
+        background-color: #fff;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 60%;
+        max-width: 1000px;
+        position: relative;
+        animation: aparecer 0.3s ease;
+    }
+
+    /* Botón cerrar */
+    .cerrar {
+        color: #333;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .cerrar:hover {
+        color: red;
+    }
+
+    .modal-content h2{
+        text-align: center;
+        color: blue ;
+    }
+
+    .modal-content p{
+        font-size: medium;
+        text-align: justify;
+    }
+    .modal-content i{
+        color: green;
+    }
+
+    @keyframes aparecer {
+        from {
+            transform: scale(0.7);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+<script>
+    // MODAL PARAS LA SECCION DE TARJETAS
+    // Abrir modal
+    document.querySelectorAll(".abrirModal").forEach(boton => {
+        boton.addEventListener("click", function () {
+            let modalId = this.getAttribute("data-modal");
+            document.getElementById(modalId).style.display = "block";
+        });
+    });
+
+    // Cerrar modal al hacer clic en X
+    document.querySelectorAll(".cerrar").forEach(cerrarBtn => {
+        cerrarBtn.addEventListener("click", function () {
+            this.closest(".modal").style.display = "none";
+        });
+    });
+
+    // Cerrar modal si se hace clic fuera del contenido
+    window.addEventListener("click", function (event) {
+        if (event.target.classList.contains("modal")) {
+            event.target.style.display = "none";
+        }
+    });
+</script>
+
+</html>

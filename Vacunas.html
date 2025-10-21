@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital de Apoyo Celendín</title>
+    <link rel="icon" href="Imagenes/Icon-Title.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+     <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="Imagenes/Logo_DIRESA.png" alt=""></a>
+        <h3 class="TituloPequeño">Hospital de Apoyo Celendín</h3>
+
+        <input type="checkbox" id="menu" />
+        <label for="menu" class="iconoMenu">
+            <img src="Imagenes/menuHeader.png" class="menu-icono soloIcono" alt="">
+        </label>
+
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="Navegacion"><a href="index.html">IR AL INICIO</a></li>
+                 <li class="Navegacion activo"><a id="nombre-usuario" href="#">Hola!</a></li>
+            </ul>
+
+            <!-- Menú de usuario separado -->
+            <div class="perfil-usuario">
+                <div class="iniciales-usuario" id="toggle-menu">--</div>
+                <div class="menu-desplegable" id="menu-usuario">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Tony</a></li>
+                        <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Mi perfil</a></li>
+                        <li><a href="#" id="cerrarSesion"><i class="fa fa-sign-out" aria-hidden="true"></i>Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+     <main class="table" id="customers_table">
+        <section class="table__header">
+            <div>
+                <h1 id="tituloHeaderHistorial">Historial de Vacunas</h1>
+                <p id="nombre-paciente">
+                    Nombres y Apellidos: <span id="nombre">Nombre_Paciente</span>
+                </p>
+            </div>
+
+
+            <div class="input-group">
+                <input type="search" type="text" id="dni" placeholder="Ingrese el DNI del paciente">
+                <img src="Imagenes/search.png" alt="">
+            </div>
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Exportar en &nbsp; &#10140;</label>
+                    <label for="export-file" id="toPDF">Pdf <img src="Imagenes/logoPdf.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL">Excel <img src="Imagenes/logoExcel.png" alt=""></label>
+                </div>
+            </div>
+        </section>
+        <section class="table__body">
+            <table id="tabla-vacunas">
+                <thead>
+                    <tr>
+                        <th>Num <span class="icon-arrow"></span></th>
+                        <th> Lugar <span class="icon-arrow"></span></th>
+                         <th>Historia Clínica<span class="icon-arrow"></span></th>
+                         <th> Nombre de la vacuna<span class="icon-arrow"></span></th>
+                          <th> Código<span class="icon-arrow"></span></th>
+                        <th> Dosis <span class="icon-arrow"></span></th>
+                        <th> Fecha <span class="icon-arrow"></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+     <script src="Index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+</body>
+
+<style>
+    .perfil-usuario {
+        position: relative;
+        margin-left: 15px;
+    }
+
+    .iniciales-usuario {
+        width: 40px;
+        height: 40px;
+        background-color: #4070f4;
+        color: white;
+        font-weight: bold;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        user-select: none;
+        font-size: 14px;
+    }
+
+    /* Menú desplegable sin efecto hover */
+    .menu-desplegable {
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 180px;
+        z-index: 999;
+    }
+
+    .menu-desplegable ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* Asegura que sea vertical */
+    }
+
+    .menu-desplegable li {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        font-size: 13px;
+        width: 100%;
+        /* Asegura el ancho completo */
+        box-sizing: border-box;
+    } 
+
+    .menu-desplegable li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-desplegable li a {
+        text-decoration: none;
+        color: #333;
+        display: flex;
+        width: 100%;
+        text-decoration: none;
+
+    }
+
+    .menu-desplegable li a:hover {
+        cursor: pointer;
+    }
+
+    .menu-desplegable li a i {
+        margin-right: 8px;
+        color: #555;
+        width: 16px;
+        text-align: center;
+    }
+    #tituloHeaderHistorial {
+    color: #0056b3; /* azul oscuro */
+}
+#nombre-paciente{
+  color: #0056b3;
+}
+
+#nombre{
+  color: black;
+}
+
+   
+
+    /* Tabla*/
+
+</style>
+
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("toggle-menu");
+    const menu = document.getElementById("menu-usuario");
+
+    toggleBtn.onclick = () => menu.style.display = menu.style.display === "block" ? "none" : "block";
+
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".perfil-usuario")) {
+            menu.style.display = "none";
+        }
+    });
+});
+
+/* Tabla*/
+
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+  import { getFirestore, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
+  
+   export const firebaseConfig = {
+    apiKey: "AIzaSyCwDnlmM5kHiT9p8Cml_A_LqUyOy-O-WXo",
+    authDomain: "usuarioshospital-a67fb.firebaseapp.com",
+    projectId: "usuarioshospital-a67fb",
+    storageBucket: "usuarioshospital-a67fb.appspot.com",
+    messagingSenderId: "530884859872",
+    appId: "1:530884859872:web:a0ba8f3c38e0ce9534fd85",
+    measurementId: "G-MWQS7YSF0K"
+  };
+
+
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  // Lista de usuarios autorizados
+  const usuarios = {
+    "71573711": "Anthony B",
+    "71650342": "Claudia Z",
+    "99887766": "Anthony Silva"
+  };
+
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      window.location.href = "Login.html";
+      return;
+    }
+
+    // Obtener DNI del email
+    const email = user.email;
+    const dni = email.split("@")[0];
+    const nombre = usuarios[dni] || dni;
+    const iniciales = nombre.split(" ").map(p => p[0]).join("").substring(0, 2).toUpperCase();
+
+    // Mostrar nombre
+    const nombreElemento = document.getElementById("nombre-usuario");
+    if (nombreElemento) nombreElemento.textContent = `Hola! ${nombre}`;
+
+    // Mostrar iniciales
+    const inicialesElemento = document.getElementById("toggle-menu");
+    if (inicialesElemento) inicialesElemento.textContent = iniciales;
+  });
+
+  // Cierre de sesión
+ const logoutLink = document.getElementById("cerrarSesion");
+if (logoutLink) {
+  logoutLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    signOut(auth)
+      .then(() => {
+        window.location.href = "Login.html"; // redirigir al login
+      })
+      .catch((error) => {
+        console.error("Error al cerrar sesión:", error);
+      });
+  });
+}
+// 🔹 Conexión a Firestore y búsqueda por DNI
+const inputSearch = document.querySelector("input[type='search']");
+const searchIcon = document.querySelector(".input-group img"); // el ícono de la lupa
+const spanNombre = document.getElementById("nombre");
+const tablaBody = document.querySelector("tbody");
+
+// Función reutilizable para buscar por DNI
+async function buscarPorDNI() {
+  const dni = inputSearch.value.trim();
+  if (!dni) return;
+
+  tablaBody.innerHTML = "";
+  spanNombre.textContent = "Buscando...";
+
+  try {
+    const q = query(collection(db, "vacunas"), where("Dni", "==", dni));
+    const querySnapshot = await getDocs(q);
+
+    if (querySnapshot.empty) {
+      spanNombre.textContent = "No encontrado";
+      return;
+    }
+
+    let index = 1;
+    let nombreCompleto = "";
+
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+
+      if (!nombreCompleto) {
+        nombreCompleto = `${data.Nombre || ""} ${data.ApellidoPaterno || ""} ${data.ApellidoMaterno || ""}`.trim();
+      }
+
+      const row = `
+        <tr>
+          <td>${index++}</td>
+          <td>${data.Lugar || ""}</td>
+          <td>${data.HistoriaClinica || ""}</td>
+          <td>${data.NombreVacuna || ""}</td>
+          <td>${data.Codigo || ""}</td>
+          <td>${data.Dosis || ""}</td>
+          <td>${data.Fecha || ""}</td>
+        </tr>
+      `;
+      tablaBody.innerHTML += row;
+    });
+
+    spanNombre.textContent = nombreCompleto || "Sin nombre";
+  } catch (error) {
+    console.error("❌ Error al obtener datos:", error);
+    spanNombre.textContent = "Error de conexión";
+  }
+}
+
+// Buscar al presionar Enter
+inputSearch.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") buscarPorDNI();
+});
+
+// Buscar al hacer clic en la lupa
+if (searchIcon) {
+  searchIcon.addEventListener("click", buscarPorDNI);
+}
+
+
+
+</script>
+
+
+
+
+</html>

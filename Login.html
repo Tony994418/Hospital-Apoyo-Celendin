@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital de Apoyo Celendín</title>
+    <link rel="icon" href="Imagenes/Icon-Title.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="Imagenes/Logo_DIRESA.png" alt=""></a>
+        <h3 class="TituloPequeño">Hospital de Apoyo Celendín</h3>
+        <input type="checkbox" id="menu" />
+        <label for="menu" class="iconoMenu">
+            <img src="Imagenes/menuHeader.png" class="menu-icono soloIcono" alt="">
+        </label>
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="Navegacion"><a href="index.html">INICIO</a></li>
+                <li class="Navegacion"><a href="Eventos.html">EVENTOS</a></li>
+                <li class="Navegacion activo"><a href="Login.html">INICIAR SESIÓN</a></li>
+                <li><a href="https://www.facebook.com/HospitalDeApoyoCelendin/" class="fa fa-facebook" target="_blank"></a></li>
+                <li><a href="" class="fa fa-whatsapp" target="_blank"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <section id="Login">
+        <div class="BienvenidaHospitalMision">
+            <div class="img-container"></div>
+            <div class="textoVision">
+                <div class="login-box">
+                    <img src="Imagenes/logoLogin.png" alt="Logo" class="avatar">
+                    <h2>HOSPITAL DE APOYO CELENDÍN</h2>
+                    <form>
+                        <div class="input-group">
+                            <label for="username"><i class="fa fa-user" aria-hidden="true"></i></label>
+                            <input type="text" id="username" placeholder="Usuario">
+                        </div>
+                        <div class="input-group">
+                            <label for="password"><i class="fa fa-lock" aria-hidden="true"></i></label>
+                            <input type="password" id="password" placeholder="Contraseña">
+                        </div>
+                        <div class="options">
+                            <a href="#" id="forgot-link">Olvidé mi Contraseña</a>
+                        </div>
+                        <button type="submit">INICIAR SESIÓN</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+      <div id="forgot-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Contacte al administrador para resetear su contraseña</p>
+      <img src="Imagenes/incorrectPasword.jpg" alt="Carita triste" class="modal-img">
+    </div>
+  </div>
+
+
+
+    <style>
+        #Login .BienvenidaHospitalMision {
+            display: flex;
+            justify-content: center;
+        }
+
+        #Login .textoVision {
+            width: 50%;
+            max-width: 600px;
+            text-align: initial;
+            padding-left: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #Login .img-container {
+            background-image: url("Imagenes/loginMedico.jpg");
+            background-size: cover;
+            background-position: center center;
+            height: 550px;
+            width: 550px;
+        }
+
+        .login-box {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .login-box h2 {
+            margin-bottom: 30px;
+            color: #222;
+            font-family: helvetica, sans-serif;
+        }
+
+        .input-group {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .input-group label {
+            margin-right: 10px;
+            font-size: 18px;
+            color: #888;
+        }
+
+        .input-group input {
+            border: none;
+            outline: none;
+            padding: 10px;
+            flex: 1;
+            font-size: 16px;
+            background: transparent;
+        }
+
+        .options {
+            width: 100%;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .options a {
+            text-decoration: none;
+            color: #eb4444;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #6a43eb;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #7b59f5;
+        }
+
+        /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 30px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .modal-content p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .modal-img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: #aaa;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #000;
+    }
+
+        @media (max-width: 992px) {
+            #Login .img-container {
+                width: 400px;
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+           
+           
+            #Login .img-container {
+               display: none;
+            }
+
+            #Login .textoVision {
+                margin-top: 30%;
+                padding: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                /* Centra horizontalmente el login-box */
+            }
+
+            .login-box {
+                width: 90%;
+                max-width: 400px;
+                box-shadow: none;
+            }
+        }
+
+        /* Efecto de aparición suave */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+   <script>
+    const forgotLink = document.getElementById("forgot-link");
+    const modal = document.getElementById("forgot-modal");
+    const closeBtn = document.querySelector(".modal .close");
+
+    forgotLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.style.display = "block";
+    });
+
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+
+
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+  // Configuración de Firebase
+ export const firebaseConfig = {
+    apiKey: "AIzaSyCwDnlmM5kHiT9p8Cml_A_LqUyOy-O-WXo",
+    authDomain: "usuarioshospital-a67fb.firebaseapp.com",
+    projectId: "usuarioshospital-a67fb",
+    storageBucket: "usuarioshospital-a67fb.appspot.com",
+    messagingSenderId: "530884859872",
+    appId: "1:530884859872:web:a0ba8f3c38e0ce9534fd85",
+    measurementId: "G-MWQS7YSF0K"
+  };
+
+
+
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  const loginForm = document.querySelector("form");
+
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const dni = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const email = `${dni}@gmail.com`;
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        alert("Inicio de sesión exitoso");
+        window.location.href = "Principal.html"; // o tu página protegida
+      })
+      .catch((error) => {
+        alert("Error: " + error.message);
+        console.error("Usuario o Contraseña incorrecta :( ", error.code, error.message);
+      });
+  });
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      console.log("Sesión activa como:", user.email);
+    } else {
+      console.log("No hay sesión activa");
+    }
+  });
+</script>
+
+    <script src="Index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+
+
+
+</html>

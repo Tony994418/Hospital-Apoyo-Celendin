@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+    font-size: 3.5em;
+    font-family: helvetica;
+}
+
+h2 {
+    font-size: 2.7em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.35em;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 1.25em;
+}
+
+body {
+    font-family: 'Roboto', Sans-serif;
+    margin: 0;
+}
+
+/* Encabezado */
+.container {
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: small;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.7s;
+    padding: 10px 20px;
+    z-index: 20;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+}
+
+header.abajo {
+    background-color: #fff;
+    padding: 15px 20px;
+}
+
+header .logo {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    font-family: helvetica;
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    transition: 0.7s;
+}
+
+/* Header Responsive */
+.menu-icono {
+    margin-top: 25px;
+    width: 27px;
+}
+
+#menu {
+    display: none;
+}
+
+.TituloPequeño {
+    display: none;
+}
+
+label .soloIcono {
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+@media (max-width: 991px) {
+    header {
+        background-color: rgb(10, 10, 10);
+        padding-bottom: 3%;
+        margin: 0%;
+    }
+
+    #hero h1 {
+        display: none;
+    }
+
+    .texto {
+        text-align: center;
+        margin: 2%;
+    }
+
+    header.abajo .TituloPequeño {
+        color: rgb(0, 0, 0);
+    }
+
+    header.abajo .TituloPequeño::before {
+        border-color: black;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgb(10, 10, 10);
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1;
+        margin: 0%;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .TituloPequeño {
+        padding-top: 15px;
+        display: block;
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .Navegacion {
+        margin: 10px 0;
+    }
+
+    label .soloIcono {
+        display: initial;
+    }
+
+    .iconoMenu {
+        margin-right: 0px;
+        margin-left: auto;
+    }
+
+    .logo {
+        margin-left: 0px;
+    }
+
+     #hero p {
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 600px){
+
+    #hero p {
+        font-size: 1.2rem;
+        padding: 60px 10px;
+        text-align: justify;
+        
+    }
+}
+
+
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+/* Efecto de líneas bajo el nav */
+.navbar ul .Navegacion a::before {
+    content: '';
+    border-bottom: 2px solid white;
+    position: absolute;
+    bottom: -5px;
+    width: 90%;
+    right: 0;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.navbar ul .Navegacion a::after {
+    content: '';
+    border-bottom: 2px solid white;
+    position: absolute;
+    bottom: -10px;
+    width: 60%;
+    left: 0;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.navbar ul .Navegacion.activo a::before,
+.navbar ul .Navegacion a:hover::before {
+    opacity: 1;
+    width: 70%;
+}
+
+.navbar ul .Navegacion.activo a::after,
+.navbar ul .Navegacion a:hover::after {
+    opacity: 1;
+    width: 40%;
+}
+
+/* Hover scale efecto */
+li {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.10);
+}
+
+/* Hero */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("Imagenes/hospi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero p {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 30px;
+    padding-bottom: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+header.abajo .logo,
+header.abajo ul li a {
+    color: black;
+}
+
+header.abajo .navbar ul .Navegacion a::before,
+header.abajo .navbar ul .Navegacion a::after {
+    border-color: black;
+}
+
+/* Efectos del botón */
+#span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff);
+}
+
+.btn-hero:hover #span1 {
+    left: 100%;
+    transition: 1s;
+}
+
+#span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #fff);
+}
+
+.btn-hero:hover #span3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+#span2 {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #fff);
+}
+
+.btn-hero:hover #span2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+#span4 {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #fff);
+}
+
+.btn-hero:hover #span4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+
+
+/* Bienvenida */
+.BienvenidaHospital {
+    margin-top: 7%;
+    margin-bottom: 75px;
+    background-color: white;
+}
+
+.texto h2 {
+    font-family: helvetica;
+}
+
+.texto p {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+}
+
+@media (min-width: 720px) {
+   
+    #TextoImagen .BienvenidaHospital {
+        display: flex;
+        justify-content: center;
+    }
+
+    #TextoImagen .h2 {
+        margin-top: 0px;
+    }
+
+    #TextoImagen .texto {
+        width: 50%;
+        max-width: 700px;
+        text-align: initial;
+        padding-left: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #TextoImagen .img-container {
+        background-image: url("Imagenes/heroBienvenida.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 600px;
+        width: 600px;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    #TextoImagen {
+        padding: 40px 15px;
+    }
+
+    .BienvenidaHospital .texto h2 {
+        font-size: 1.6rem;
+    }
+
+    .BienvenidaHospital .texto p {
+        font-size: 0.95rem;
+    }
+
+    .BienvenidaHospital .img-container {
+        background-image: url("Imagenes/heroBienvenida.jpg");
+        background-size: cover;
+        background-position: center center;
+        min-height: 400px;
+    }
+}
+
+/* MISIÓN YU VISIÓN */
+.BienvenidaHospitalMision {
+    margin-top: 7%;
+    margin-bottom: 75px;
+    background-color: white;
+}
+
+.texto h2 {
+    font-family: helvetica;
+}
+
+.texto p {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+}
+
+@media (min-width: 720px) {
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #TextoImagenVision .BienvenidaHospitalMision {
+        display: flex;
+        justify-content: center;
+    }
+
+    #TextoImagenVision .h2 {
+        margin-top: 0px;
+    }
+
+    .textoVision h3 {
+         font-family: 'Courier New', Courier, monospace;
+        color: rgb(48, 48, 123);
+    }
+
+    .textoVision p {
+        text-align: justify;
+         font-family: 'Courier New', Courier, monospace;
+    }
+
+    #TextoImagenVision .textoVision {
+        width: 50%;
+        max-width: 700px;
+        text-align: initial;
+        padding-left: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #TextoImagenVision .img-container {
+        background-image: url("Imagenes/heroMision3.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 600px;
+        width: 600px;
+    }
+    
+}
+
+/*Mision Vision*/
+@media (max-width: 600px) {
+    #TextoImagenVision{
+        margin-top: -25%;
+    }
+    .textoVision h3 {
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .textoVision p {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.95rem;
+        text-align: justify;
+        padding: 0 15px; 
+    }
+}
+
+
+
+    /* Pie de página */
+    .piePagina {
+        background-color: #232222;
+        color: rgb(51, 51, 51);
+        padding: 10px 0 0 0;
+    }
+
+    .iconosFooter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .FooterContainer .iconosFooter a {
+        font-size: 20px;
+        position: relative;
+        text-decoration: none;
+        color: white;
+        letter-spacing: 50px;
+        padding-bottom: 1px;
+        padding-top: 10px;
+    }
+
+    .piePagina .FooterContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ContactoIglesia h3 {
+        text-align: center;
+        color: white;
+    }
+
+    .ContactoIglesia {
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .ContactoIglesia h3,
+    .ContactoIglesia p {
+        text-align: center;
+        line-height: 1.5;
+        padding-top: 10px;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    .ContactoIglesia a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .navegacion a {
+        padding: 5px 12px;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(244, 239, 239);
+    }
+
+    .FooterContainer p {
+        text-align: center;
+        color: white;
+        padding-bottom: 30px;
+    }
+    /* Pie de Pagina Responsive*/
+   
+
+    @media (max-width: 767px) {
+        .iconosFooter {
+            gap: 15px; /* menos espacio en móviles */
+        }
+
+        .navegacion a {
+            display: block;
+            padding: 8px 0;
+        }
+        .containerReserva{
+            padding: 0 15px;
+        }
+    }

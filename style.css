@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: small;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.7s;
+    padding: 10px 20px;
+    z-index: 20;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+}
+
+
+header .logo {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    font-family: helvetica;
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    transition: 0.7s;
+}
+
+/* Header Responsive */
+.menu-icono {
+    margin-top: 15px;
+    width: 27px;
+}
+
+#menu {
+    display: none;
+}
+
+.TituloPequeño {
+    display: none;
+}
+
+label .soloIcono {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    header {
+        background-color: rgb(10, 10, 10);
+        padding-bottom: 3%;
+        margin: 0%;
+    }
+
+    header.abajo .TituloPequeño {
+        color: rgb(0, 0, 0);
+    }
+
+    header.abajo .TituloPequeño::before {
+        border-color: black;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgb(10, 10, 10);
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1;
+        margin: 0%;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .TituloPequeño {
+        padding-top: 15px;
+        display: block;
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .Navegacion {
+        margin: 10px 0;
+    }
+
+    label .soloIcono {
+        display: initial;
+    }
+
+    .iconoMenu {
+        margin-right: 0px;
+        margin-left: auto;
+    }
+
+    .logo {
+        margin-left: 0px;
+    }
+}
+
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+/* Efecto de líneas bajo el nav */
+.navbar ul .Navegacion a::before {
+    content: '';
+    border-bottom: 2px solid white;
+    position: absolute;
+    bottom: -5px;
+    width: 90%;
+    right: 0;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.navbar ul .Navegacion a::after {
+    content: '';
+    border-bottom: 2px solid white;
+    position: absolute;
+    bottom: -10px;
+    width: 60%;
+    left: 0;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.navbar ul .Navegacion.activo a::before,
+.navbar ul .Navegacion a:hover::before {
+    opacity: 1;
+    width: 70%;
+}
+
+.navbar ul .Navegacion.activo a::after,
+.navbar ul .Navegacion a:hover::after {
+    opacity: 1;
+    width: 40%;
+}
+
+/* Hover scale efecto */
+li {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.10);
+}
+
+
+
+
+body {
+    min-height: 100vh;
+    background: url(Imagenes/heroVacuna.jpg) center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@media print {
+    body {
+        background: #fff !important;
+    }
+
+    .table, .table__body {
+        overflow: visible;
+        height: auto !important;
+        width: auto !important;
+    }
+}
+
+
+main.table {
+    margin-top: 5%;
+    width: 89vw;
+    height: 85vh;
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
+.table__header {
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: .8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table__header .input-group {
+    width: 35%;
+    height: 100%;
+    background-color: #fff5;
+    padding: 0 .8rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+
+.table__header .input-group:hover {
+    width: 45%;
+    background-color: #fff8;
+    box-shadow: 0 .1rem .4rem #0002;
+}
+
+.table__header .input-group img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.table__header .input-group input {
+    width: 100%;
+    padding: 0 .5rem 0 .3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.table__body {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    overflow: overlay;
+}
+
+.table__body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+#tituloHeaderHistorial{
+    color: black;
+
+}
+
+#nombre-paciente {
+    font-weight: bold;
+}
+
+
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+tbody tr {
+    --delay: .1s;
+    transition: .5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+tbody tr:hover {
+    background-color: #fff6 !important;
+}
+
+tbody tr td,
+tbody tr td p {
+    transition: .2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+    padding: 0;
+    font: 0 / 0 sans-serif;
+    transition: .2s ease-in-out .5s;
+}
+
+.status {
+    padding: .4rem 0;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.status.delivered {
+    background-color: #86e49d;
+    color: #006b21;
+}
+
+.status.cancelled {
+    background-color: #d893a3;
+    color: #b30021;
+}
+
+.status.pending {
+    background-color: #ebc474;
+}
+
+.status.shipped {
+    background-color: #6fcaea;
+}
+
+@media (max-width: 1000px) {
+    td:not(:first-of-type) {
+        min-width: 12.1rem;
+    }
+}
+
+thead th.active span.icon-arrow {
+    background-color: #6c00bd;
+    color: #fff;
+}
+
+thead th.asc span.icon-arrow {
+    transform: rotate(180deg);
+}
+
+thead th.active,
+tbody td.active {
+    color: #6c00bd;
+}
+
+.export__file {
+    position: relative;
+}
+
+.export__file .export__file-btn {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: #fff6 url(Imagenes/export.png) center / 80% no-repeat;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+}
+
+.export__file .export__file-btn:hover {
+    background-color: #fff;
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.export__file input {
+    display: none;
+}
+
+.export__file .export__file-options {
+    position: absolute;
+    right: 0;
+    width: 12rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0;
+    transform: scale(.8);
+    transform-origin: top right;
+    box-shadow: 0 .2rem .5rem #0004;
+    transition: .2s;
+}
+
+.export__file input:checked + .export__file-options {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 100;
+}
+
+.export__file .export__file-options label {
+    display: block;
+    width: 100%;
+    padding: .6rem 0;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: .2s ease-in-out;
+}
+
+.export__file .export__file-options label:first-of-type {
+    padding: 1rem 0;
+    background-color: rgb(230, 213, 213) !important;
+}
+
+.export__file .export__file-options label:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.export__file .export__file-options img {
+    width: 1rem;
+    height: auto;
+}

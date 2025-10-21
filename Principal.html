@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital de Apoyo Celendín</title>
+    <link rel="icon" href="Imagenes/Icon-Title.png" type="image/x-icon">
+    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+    <header>
+        <a href="Index.html"><img class="logo" src="Imagenes/Logo_DIRESA.png" alt=""></a>
+        <h3 class="TituloPequeño">Hospital de Apoyo Celendín</h3>
+
+        <input type="checkbox" id="menu" />
+        <label for="menu" class="iconoMenu">
+            <img src="Imagenes/menuHeader.png" class="menu-icono soloIcono" alt="">
+        </label>
+
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="Navegacion"><a href="Index.html">IR AL INICIO</a></li>
+                <li class="Navegacion activo"><a id="nombre-usuario" href="#">Hola!</a></li>
+            </ul>
+
+            <!-- Menú de usuario separado -->
+            <div class="perfil-usuario">
+                <div class="iniciales-usuario" id="toggle-menu">--</div>
+                <div class="menu-desplegable" id="menu-usuario">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Tony</a></li>
+                        <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Mi perfil</a></li>
+                        <li><a href="#" id="cerrarSesion"><i class="fa fa-sign-out" aria-hidden="true"></i>Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="card-group">
+        <div class="card">
+            <span class="nombre-visible">Vacunas</span>
+            <img src="Imagenes/vacu.jpg" loading="lazy">
+            <div class="info">
+                <h2>Vacunas</h2>
+                <button><a href="Vacunas.html">Ingresar</a></button>
+            </div>
+        </div>
+        <div class="card">
+            <span class="nombre-visible">ANEMIA</span>
+            <img src="Imagenes/anemia.jpg" loading="lazy">
+            <div class="info">
+                <h2>Anemia</h2>
+                <button><a href="">Ingresar</a></button>
+            </div>
+        </div>
+        <div class="card">
+            <span class="nombre-visible">Control Niño</span>
+            <img src="Imagenes/controlNiños.jpg" loading="lazy" >
+            <div class="info">
+                <h2>Control Niño</h2>
+                <button><a href="">Ingresar</a></button>
+            </div>
+        </div>
+    </div>
+
+
+
+   
+
+</body>
+
+<style>
+    .perfil-usuario {
+        position: relative;
+        margin-left: 15px;
+    }
+
+    .iniciales-usuario {
+        width: 40px;
+        height: 40px;
+        background-color: #4070f4;
+        color: white;
+        font-weight: bold;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        user-select: none;
+        font-size: 14px;
+    }
+
+    /* Menú desplegable sin efecto hover */
+    .menu-desplegable {
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 180px;
+        z-index: 999;
+    }
+
+    .menu-desplegable ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* Asegura que sea vertical */
+    }
+
+    .menu-desplegable li {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        font-size: 13px;
+        width: 100%;
+        /* Asegura el ancho completo */
+        box-sizing: border-box;
+    }
+
+    .menu-desplegable li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-desplegable li a {
+        text-decoration: none;
+        color: #333;
+        display: flex;
+        width: 100%;
+        text-decoration: none;
+
+    }
+
+    .menu-desplegable li a:hover {
+        cursor: pointer;
+    }
+
+    .menu-desplegable li a i {
+        margin-right: 8px;
+        color: #555;
+        width: 16px;
+        text-align: center;
+    }
+
+    /*Cartas*/
+
+    body {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("Imagenes/heroPrinci.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .card-group {
+        display: flex;
+        gap: 25px;
+    }
+
+    .card {
+        width: 280px;
+        height: 400px;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        transition: 0.1s;
+    }
+
+    .card .info {
+        position: absolute;
+        bottom: -50%;
+        padding: 35px 10px;
+        opacity: 0;
+        transition: 0.5s bottom, 1s opacity;
+    }
+
+    .card .info h2 {
+        margin-bottom: 5px;
+    }
+
+
+
+    .info button {
+        background-color: #000000;
+        border: none;
+        padding: 8px 12px;
+        font-weight: bold;
+        border-radius: 8px;
+        margin-top: 0%;
+        color: white;
+        cursor: pointer;
+
+    }
+
+    .info button a {
+        color: white;
+        text-decoration: none;
+    }
+
+    
+    .card:hover>.layer {
+        opacity: 1;
+    }
+
+    .card:hover>.info {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    .card:hover img {
+        filter: blur(3px);
+        transform: scale(1.1);
+    }
+
+    .card img {
+        transition: filter 0.4s ease, transform 0.4s ease;
+    }
+
+
+    .nombre-visible {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        z-index: 10;
+        font-family: 'Roboto', sans-serif;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        transition: all 0.4s ease;
+        pointer-events: none;
+    }
+
+    .card:hover .nombre-visible {
+        transform: translateX(-50%) translateY(-30px);
+        opacity: 0;
+    }
+</style>
+
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("toggle-menu");
+    const menu = document.getElementById("menu-usuario");
+
+    toggleBtn.onclick = () => menu.style.display = menu.style.display === "block" ? "none" : "block";
+
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".perfil-usuario")) {
+            menu.style.display = "none";
+        }
+    });
+});
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+
+  // Configuración de Firebase
+     export const firebaseConfig = {
+    apiKey: "AIzaSyCwDnlmM5kHiT9p8Cml_A_LqUyOy-O-WXo",
+    authDomain: "usuarioshospital-a67fb.firebaseapp.com",
+    projectId: "usuarioshospital-a67fb",
+    storageBucket: "usuarioshospital-a67fb.appspot.com",
+    messagingSenderId: "530884859872",
+    appId: "1:530884859872:web:a0ba8f3c38e0ce9534fd85",
+    measurementId: "G-MWQS7YSF0K"
+  };
+
+
+
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // Lista de usuarios autorizados
+  const usuarios = {
+    "71573711": "Anthony B",
+    "71650342": "Claudia Z",
+    "99887766": "Anthony Silva"
+  };
+
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      window.location.href = "Login.html";
+      return;
+    }
+
+    // Obtener DNI del email
+    const email = user.email;
+    const dni = email.split("@")[0];
+    const nombre = usuarios[dni] || dni;
+    const iniciales = nombre.split(" ").map(p => p[0]).join("").substring(0, 2).toUpperCase();
+
+    // Mostrar nombre
+    const nombreElemento = document.getElementById("nombre-usuario");
+    if (nombreElemento) nombreElemento.textContent = `Hola! ${nombre}`;
+
+    // Mostrar iniciales
+    const inicialesElemento = document.getElementById("toggle-menu");
+    if (inicialesElemento) inicialesElemento.textContent = iniciales;
+  });
+
+  // Cierre de sesión
+ const logoutLink = document.getElementById("cerrarSesion");
+if (logoutLink) {
+  logoutLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    signOut(auth)
+      .then(() => {
+        window.location.href = "Login.html"; // redirigir al login
+      })
+      .catch((error) => {
+        console.error("Error al cerrar sesión:", error);
+      });
+  });
+}
+</script>
+
+
+
+</html>
