@@ -466,3 +466,52 @@ tbody td.active {
     width: 1rem;
     height: auto;
 }
+
+
+/* ==== Ajustes Responsivos para Celulares ==== */
+@media (max-width: 768px) {
+    main.table {
+        width: 95vw;       
+        height: auto;    
+        margin-top: 0%;  
+        border-radius: .6rem;
+        overflow-x: auto;
+    }
+
+    .table__header {
+       flex-direction: row;        /* ✅ Mantiene los elementos en línea */
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        height: auto;
+        padding: 0.8rem 1rem;
+        flex-wrap: wrap;      
+    }
+
+    .table__header .input-group {
+        width: 80%;              /* El campo de búsqueda ocupa todo el ancho */
+    }
+
+    .table__body {
+        width: 100%;
+        max-height: none;         /* Elimina la altura máxima */
+        margin: 0;
+        border-radius: 0;
+    }
+
+    table {
+        font-size: 0.8rem;        /* Reduce ligeramente el tamaño de fuente */
+        min-width: 600px;         /* Permite scroll horizontal si hay muchas columnas */
+    }
+
+    th, td {
+        padding: 0.6rem;
+    }
+
+    thead th {
+        position: sticky;
+        top: 0;
+        background-color: #d5d1de;
+        font-size: 0.85rem;
+    }
+}

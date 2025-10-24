@@ -17,9 +17,7 @@
         <h3 class="TituloPequeño">Hospital de Apoyo Celendín</h3>
 
         <input type="checkbox" id="menu" />
-        <label for="menu" class="iconoMenu">
-            <img src="Imagenes/menuHeader.png" class="menu-icono soloIcono" alt="">
-        </label>
+      
 
         <nav class="navbar">
             <ul class="menu">
@@ -258,6 +256,41 @@
         transform: translateX(-50%) translateY(-30px);
         opacity: 0;
     }
+
+@media (max-width: 992px) {
+    .card-group {
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%;
+        height: 380px;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+    .card-group {
+        margin-top: 40%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        height: 360px;
+        
+    }
+
+    .nombre-visible {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
 </style>
 
 <script>
